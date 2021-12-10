@@ -1,0 +1,440 @@
+
+/* !GLOBALES */
+
+/**definir la paleta de colores */
+/*todo--  La pseudo clase root sirve para definir variables globales */
+:root{
+    --blanco: #d1d1d1;
+    --negro: #212121;
+    --primario: #0a0d4e;
+    --secundario: #0080a7;
+    --gris: #757575;
+    --gris_claro: rgb(161, 163, 165);
+    
+    --fuete_principal: 3.8rem;
+}
+
+
+/* rem es una unidad de medida, si se configura el html de la siguiente manera es mas facil trabajar con las medidas adaptandolas a diferentes pantallas, por ejemplo; smart tv, tablets, celulares */
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    /*?añadimos efecto a la barra de scroll, por medio del eje de las y, ya que es una pagina vertical */
+    scroll-snap-type: y mandatory;
+}
+
+
+
+/* lineas de codigo que sirven para el borde de caja, es decir, que no afecte el pading al tamaño establecido */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* todo lo que este dentro de body aplica en todo el documento */
+body{
+    font-size: 16px; /* 1 rem = 10 px*/
+    font-family:Arial, Helvetica, sans-serif;
+
+    /* para realizar degradados a la pagina web */
+    background-image: linear-gradient( to top, var(--gris_claro) 0%, var(--blanco) 20% );
+}
+
+.btn{
+    background-color: var(--secundario);
+    padding: 1rem 3rem;
+    font-size: 2rem; /** tamaño de la fuente**/
+    margin-top: 3rem; /**separacion entre otros elementos**/
+    color:var(--blanco);
+    text-decoration: none; /** quitar la linea punteada al enlace**/
+    text-transform: uppercase;
+    font-weight: bold; /** grosor de la fuente**/
+    border-radius: .5rem;
+    width: 90%;           /**ancho que ocupa el boton**/
+    text-align: center;
+        /* propiedad que se utiliza para quitar el borde del boton "enviar", dentro del formulario
+            ?debido a que es un elemento de tipo input-submit, este tendra por defecto un borde*/
+            /*! si esta propiedad no existe en el enlace, por ejemplo en el boton contactar, simplemente no le afecta, no lo hace. */
+            border: none;    
+}
+
+/* el "hover" es para agregar reglas cuando estemos sobre el boton
+    en este caso, se esta agregando el puntero ("la manita")para que pueda ser seleccionado */
+.btn:hover{
+    cursor: pointer;
+}
+
+
+/* sombras */
+    /* las sobras se hacen por medio de "cssmatic", solo es cosa de mover el curso hasta que se vea bien y copiar y pegar el codigo que genera dicha configuracion */
+.sombra{
+        -webkit-box-shadow: 0px 0px 69px 0px rgba(0,0,0,0.38);
+        -moz-box-shadow: 0px 0px 69px 0px rgba(0,0,0,0.38);
+        box-shadow: 0px 0px 69px 0px rgba(0,0,0,0.38);
+        background-color: var(--blanco);
+        padding: 2rem;
+        border-radius: 2rem;
+}
+
+/* la clase contenedor fue creada con el fin de centrar los textos */
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+    }
+
+
+    /*! TIPOGRAFIA */
+h1{
+    font-size: var(--fuete_principal);
+}
+h2{
+    font-size:2.8rem ;
+}
+h3{
+    font-size:1.8rem ;
+}
+
+h1,h2,h3{
+    text-align: center;
+    font-weight:bold;
+}
+
+.title span{
+    font-size: 2rem;
+    color:var(--primario);
+}
+
+p{
+    text-align:justify;
+    color: #160f0f;
+}
+
+
+/* !utilidades */
+    /* solamente una propiedad y valor por clase */
+/*? cuando el tamaño sea pequeño ocuapara un ancho del 100% */
+
+/* .w100{
+    width: 100%;
+}
+
+/*configurar el display como caja flexible*/
+.flex{
+    display: flex;
+} */
+
+/* son para los eventos en css, en este caso, cuando se esta sobre un elemento en la barra de navegacion  */
+.navegacion_principal a:hover{
+    background-color: var(--primario);
+    color: var(--negro);
+    font-weight: bold;
+}
+
+/* acedemos a la etiqueta por medio de la clase  */
+.navegacion_principal a{
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+
+.navegacion_principal{
+    /* modulo de caja flexible  */
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.ubicacion{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.background_nav_prin{
+    background-color: var(--secundario);    
+}
+
+
+
+/* codigo css para la imagen de fondo y contenido */
+
+.fond{   
+    background-image: url(/img/fondo.jpg);  
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+
+    /* separacion hacia abajo */
+    margin-bottom: 2rem;
+}
+
+/* agregamos especificaciones a la imagen de fondo */
+.contenido_fond{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);/** forma anterior de hacerlo**/
+
+    background-color: rgb(0 0 0 / 55%); /* forma actual de hacerlo*/
+    width: 100%;
+    height: 100%;
+
+    /**establecemos el display a caja flexible para centrar vertical y horizontal */
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*aplicamos las mismas reglas para los headings y parrafos dentro del contenido font */
+.contenido_fond h2,
+.contenido_fond p{
+    color: var(--blanco);}
+
+
+
+
+
+
+.aboutme{
+    display: flex;
+    align-items: center;
+    gap:15px;
+}
+.foto-perfil{
+    width: 150px;
+    height: 150px;
+}
+
+
+
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.project-imagen{
+    width: 100vw;
+}
+
+/*?acedemos a los headig`s que se encuentran en la clase .project */
+.project h3{
+    color:var(--secundario);
+    font-weight: bold;
+}
+
+/* accedemos a los parrafos de la clase .project*/
+.project p{
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* .project .icono{
+    height: 15rem;
+    width: 15rem;
+    display: flex;
+    background-color: var(--primario);
+    border-radius: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+} */
+
+/* ?para quitar el borde que tiene por defecto el formulario */
+.formulario fieldset{
+    border: none;
+}
+
+/*?estilos para la leyeda del formulario */
+.formulario legend
+{
+    text-align: center;
+    text-transform: uppercase;
+    color:#d7d9e0;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+.formulario{
+    background-color:#0d112b;
+    width: min(67rem, 100%); /* min toma el valor minimo, es decir si la pantalla es menor a 670px (un celular por ejemplo, tomara este valor)**/
+
+
+                    /* todo MARGIN */
+    /* Margin : o auto--> se utiliza para centrar cuando el elemento no tiene display flex.
+
+        *En este caso la clase padre de .formulario: no tiene un display flex.
+    
+        *por defecto los formularios utilizan un display block */
+
+    margin: 0 auto;
+
+    /**/
+
+    /*padding es la separacion a los alrededores del elemento*/
+    padding: 2rem;
+    border-radius:2rem;
+
+}
+
+/*todo --------------------------------------------- */
+/* habilitamos el display grid porque se va trabajar con columnas y filas  */
+.contenedor_campos{
+    display: grid;
+
+
+    /*separacion entre las columnas
+        │  │   │  
+        │  │   │  
+        │  │   │
+    */
+    column-gap: 3.5rem;
+}
+
+
+.campo:nth-child(3),
+.campo:nth-child(4 ){
+    /* todo ---> para posicionar un elemento se utliza: grid-column: ; */
+        grid-column: 1 / 3 ; /*va de la culumna 1 a 3*/
+}
+
+
+
+.campo textarea{
+    height: 20rem;/*altura del "texarea" --> el mensaje*/
+}
+
+
+.campo{
+    /* separacion hacia abajo, es decir, entre las etiquetas y las inputs */
+    margin-bottom: 3rem;
+}
+
+
+.campo label{
+    display: block;
+    color: var(--blanco);
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+
+
+/* todo --> Añadimos reglas/ estilos para todos los elementos de entrada */
+.input__text{
+    /** con width hacemos que tome todo el espacio disponible */
+    width: 100%;
+
+    border:none;
+    
+    /* padding establece el tamñaño de relleno de todos lados de un elemento */
+    padding: 2.5rem;
+    border-radius: .75rem;
+
+}
+
+
+
+
+
+
+/* *media queries son para establecer los cambios que se aplicaran segun el tamaño de pixeles */
+/*
+todo:     @media(min-width: 480px)
+?a partir de los 480 pixeles aplicara las siguientes reglas  
+{
+    body{
+        background-color:chocolate;
+        !font-size: es para cambiar el tamaño de la fuente  
+        font-size: 2.5rem;
+    }
+}
+*/
+
+
+
+/* 480 pixeles son los pixeles estandar que se aplican a los celulares */
+@media(min-width: 480px){
+    .navegacion_principal{
+        font-weight: bold;
+    }
+}
+
+/* media querie para una tablet */
+@media(min-width: 768px){
+    .navegacion_principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* resposive para el boton a partir de las tablets */
+@media(min-width: 768px){
+    .btn{
+        width: auto;
+    }
+}
+
+
+@media(min-width: 768px){    
+    .projects{
+        /* el display grid permite trabajar con columnas y filas  */
+        display: grid;
+
+        /*todo -- cualquier manera de las siguientes es valida para realizar la division entre columnas */
+
+        /* grid-template-columns: 33.3% 33.3% 33.3%; 
+        grid-template-columns: 1fr 1fr 1fr; */
+        grid-template-columns: repeat(1, 1fr);
+
+        /* column-gap: es para la separacion entre las columnas */
+        column-gap: 3rem;
+    }
+
+    .project-imagen{
+        width: 80vw;
+    }
+    
+}
+
+@media(min-width: 768px){
+    .contenedor_campos{
+    /*?grid-template-columns: se utiliza para definir las areas de las columnas : */
+            grid-template-columns: repeat(2,1fr); 
+
+    grid-template-rows: auto auto 20rem;
+    }
+}
+
+/*? los selectores indican que al hijo no. 3 y 4, se le aplicaran los siguientes estilos */
+/*!:nth-child() empieza desde uno, a diferencia de los arreglos en programacion */
+
+@media(min-width: 768px)
+{
+    .alinear_derecha .btn{
+        width: auto;
+    }    
+}
+
+
+
+
+/* media querie para una lap o computadora de escritorio */
+@media(min-width: 1140px){
+    .navegacion_principal{font-weight: normal;}
+}
+
+@media(min-width: 1400px){
+    
+}
+
+
+
