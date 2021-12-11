@@ -12,15 +12,15 @@
 </head>
 <body>
     <header>
-        <h1 class="title"> Daniel Martinez <span> Jr Developer </span> </h1>
+        <h1 class="title"> Daniel Martinez  <span> Jr Developer </span> </h1>
     </header>
 
     <div class="background_nav_prin">
         <!-- una caracteristica de las clases es que se pueden porner varias en la misma etiqueta, por ejemplo: -->
         <nav class="navegacion_principal contenedor">
-            <a href="#">About</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
+            <a href="#aboutme">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </div>
     
@@ -75,14 +75,14 @@
                 </g></svg>
                 
             Iguala, Gro</p>
-            <a class="btn" href="#">contactar</a>
+            <a class="btn" href="#contact">contactar</a>
         </div> <!-- contenido font-->
     </section>       
     
     <main class="contenedor sombra">
-        <h2 >aboutme</h2>
+        <h2 id="aboutme" >aboutme</h2>
 
-        <section class="aboutme">
+        <section  class="aboutme">
             <img class="foto-perfil" src="./img/perfil.PNG" alt="foto perfil">
             <p> 
                 Hola, mi nombre es Dani, tengo 22 años y
@@ -92,11 +92,9 @@
         </section>
 
 
-        <h2>Projects</h2>
+        <h2 id="projects">Projects</h2>
         
-        
-        <div class=" projects">
-        
+        <div  class=" projects">
         <section class= "project" >
             <h3>Devs Automotriz</h3>
             <a href="https://fervent-kalam-b164a9.netlify.app/index.html">
@@ -119,7 +117,7 @@
 
     </div> <!--.Projects-->
     
-    <section>
+    <section id="contact">
         <h2>Contacto</h2>
         
         <form class="formulario">

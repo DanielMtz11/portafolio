@@ -91,7 +91,7 @@ h2{
     font-size:2.8rem ;
 }
 h3{
-    font-size:1.8rem ;
+    font-size:2rem ;
 }
 
 h1,h2,h3{
@@ -206,13 +206,17 @@ p{
     display: flex;
     align-items: center;
     gap:15px;
+    flex-direction:column;
+    margin-bottom: 70px;
 }
 .foto-perfil{
     width: 150px;
     height: 150px;
 }
 
-
+.projects{
+    margin-bottom: 20px;
+}
 
 .project{
     display: flex;
@@ -235,6 +239,7 @@ p{
 .project p{
     line-height: 1.5;
     text-align: center;
+    margin-top: 5px;
 }
 
 /* .project .icono{
@@ -359,11 +364,16 @@ todo:     @media(min-width: 480px)
     }
 }
 */
-
+@media(max-width:480px ){
+    span{
+        display: block;
+    }
+}
 
 
 /* 480 pixeles son los pixeles estandar que se aplican a los celulares */
 @media(min-width: 480px){
+   
     .navegacion_principal{
         font-weight: bold;
     }
@@ -378,8 +388,11 @@ todo:     @media(min-width: 480px)
     }
 
     .aboutme{
+        flex-direction: row;
         margin: 0 60px;
     }
+
+
 }
 
 /* resposive para el boton a partir de las tablets */
@@ -436,11 +449,18 @@ todo:     @media(min-width: 480px)
 /* media querie para una lap o computadora de escritorio */
 @media(min-width: 1140px){
     .navegacion_principal{font-weight: normal;}
+
+    .aboutme{
+        width: ;
+        display: grid;
+        grid-template-columns: repeat(2,20% 80%);
+    }
+
+    .foto-perfil{
+        /* margin-left: 50px; */
+    }
 }
 
-@media(min-width: 1400px){
-    
-}
 
 
 
