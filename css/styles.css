@@ -107,6 +107,7 @@ h1,h2,h3{
 p{
     text-align:justify;
     color: #160f0f;
+    line-height: 1.4;
 }
 
 
@@ -373,6 +374,11 @@ todo:     @media(min-width: 480px)
     .navegacion_principal{
         flex-direction: row;
         justify-content: space-between;
+
+    }
+
+    .aboutme{
+        margin: 0 60px;
     }
 }
 
